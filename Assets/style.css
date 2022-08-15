@@ -1,0 +1,277 @@
+html {
+  --blue-color: rgb(241, 112, 72);
+  --grey-color: rgb(44, 46, 46);
+  width: 1520px;
+  margin: auto;
+  background: var(--grey-color);
+}
+
+body {
+  background: lightgrey;
+}
+
+h1 {
+  font-size: 40px;
+  color: var(--grey-color);
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+/* ----------- HEADER SECTION WITH NAV BAR ----------*/
+
+header {
+  height: 90px;
+  line-height: 90px;
+  background: var(--grey-color);
+  padding-top: 5px;
+}
+
+.header-name {
+  display: inline-block;
+  width: 260px;
+  height: 80px;
+  line-height: 60px;
+  margin: 10px auto auto 0px;
+  padding-right: 20px;
+  background: var(--blue-color);
+  color: var(--grey-color);
+  text-align: right;
+  font-size: 40px;
+}
+
+.navbar {
+  float: right;
+  height: 60px;
+  line-height: 60px;
+  margin: 10px 60px;
+}
+
+nav {
+  padding: 0 10px 0 10px;
+  display: inline-block;
+  color: var(--blue-color);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.underlined {
+  border-bottom: 4px solid currentColor;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+/* ---------- MAIN BANNER -----------*/
+
+#banner {
+  height: 200px;
+  padding-bottom: 100px;
+  border-radius: 50%;
+  width: 100%;
+}
+
+.circle {
+  line-height: 0; /* remove line-height */
+  display: inline-block; /* circle wraps image */
+  margin: 5px;
+  border: 5px solid rgba(58, 58, 58, 0.829);
+  border-radius: 100%; /* relative value */
+  /*box-shadow: 0px 0px 5px rgba(0,0,0,0.4);*/
+  transition: linear 0.25s;
+  height: 250px;
+  width: 250px;
+}
+.circle img {
+  border-radius: 50%;
+}
+
+.subtitle {
+  width: 350px;
+  height: 80px;
+  margin: auto 80px auto auto;
+  background: var(--blue-color);
+}
+
+.subtitle > p {
+  padding: 5px;
+  padding-right: 10px;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Permanent Marker";
+  color: var(--grey-color);
+  text-align: end;
+}
+
+/* ------------ MAIN SECTION ------------*/
+
+#main-section {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: auto auto auto;
+  justify-content: space-evenly;
+  align-content: top;
+  grid-row-gap: 25px;
+}
+
+.grid-item {
+  height: 100%;
+}
+
+.grid-item h1 {
+  margin: 20px 30px auto auto;
+  text-align: right;
+  font-family: "Permanent Marker";
+}
+
+.grid-item-left {
+  border-right: 3px solid var(--grey-color);
+}
+
+.grid-item-right {
+  padding: 10px 50px 10px 20px;
+  font-family: sans-serif;
+  font-size: large;
+}
+
+.work-content,
+.work {
+  height: auto;
+}
+
+/*------------ WORK CONTENT SECTION ---------------*/
+
+.inner-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% auto auto;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+}
+
+.inner-grid-item {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  border: 4px solid var(--blue-color);
+}
+
+.inner-grid-item *:hover {
+  opacity: 1;
+}
+
+.child-grid-banner {
+  position: absolute;
+  bottom: 8px;
+  left: 0px;
+  display: inline-block;
+  padding: 12px;
+  background: var(--blue-color);
+}
+
+.child-grid-banner h3 {
+  padding-bottom: 8px;
+}
+
+.child-grid-banner p {
+  font-size: small;
+}
+
+.inner-grid-item img {
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  object-fit: cover;
+  object-position: 50% 70%;
+  opacity: 0.7;
+}
+
+.main-inner-child-grid {
+  grid-column: 1/3;
+  height: 415px;
+}
+
+/*-------------- CONTACT ME SECTION --------------- */
+
+.contact-me-content {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  line-height: 100%;
+}
+
+.contact-me-content a {
+  margin: auto;
+  margin-right: 25px;
+  border-bottom: 2px solid var(--grey-color);
+  text-decoration: none;
+}
+
+/* ----------- FOOTER ------------*/
+
+footer {
+  height: 100px;
+  line-height: 100px;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+/*------------RESPONSIVE ITEMS ---------------*/
+
+@media screen and (max-width: 1519px) {
+  html {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 896px) {
+  header {
+    height: 185px;
+  }
+
+  .header-name {
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+  }
+
+  .header-name h1 {
+    text-align: center;
+  }
+
+  .navbar {
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .underlined {
+    border-bottom: 4px solid currentColor;
+    display: inline-block;
+    line-height: 1.5;
+  }
+
+  .grid-item h1 {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: -10px;
+  }
+
+  .contact-me-content {
+    flex-direction: column;
+  }
+
+  .contact-me-content a {
+    margin-left: 0px;
+  }
+}
